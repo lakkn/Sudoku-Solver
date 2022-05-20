@@ -9,7 +9,7 @@ def index():
   if request.method == "POST":
     for i in range(0,81):
       number = request.form[str(i)]
-      if not number or not number == '1' or not number == '2' or not number == '3' or not number == '4' or not number == '5' or not number == '6' or not number == '7' or not number == '8' or not number == '9':
+      if (not number) or ((number != '1') and (number != '2') and (number != '3') and (number != '4') and (number != '5') and (number != '6') and (number != '7') and (number != '8') and (number != '9')):
         numbers[i] = '0'
       else:
         numbers[i] = number
